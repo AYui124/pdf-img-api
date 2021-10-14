@@ -26,9 +26,8 @@ module.exports = {
         // 不用监听的文件
         'node_modules',
         'logs',
-        'news',
         'run',
-        'test',
+        'output',
         'typings',
         'pm2.config',
       ],
