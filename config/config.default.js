@@ -24,6 +24,14 @@ module.exports = appInfo => {
     },
   };
 
+  config.customLoader = {
+    util: {
+      directory: 'app/util',
+      inject: 'ctx',
+      loadunit: true,
+    },
+  };
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
