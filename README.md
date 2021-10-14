@@ -9,7 +9,6 @@
 #### Linux (Debian based)
 
 ```bash
-
 $ sudo apt-get update
 $ sudo apt-get install ghostscript
 $ sudo apt-get install graphicsmagick
@@ -18,7 +17,6 @@ $ sudo apt-get install graphicsmagick
 #### Mac OS
 
 ```bash
-
 $ brew update
 $ brew install gs graphicsmagick
 ```
