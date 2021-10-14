@@ -12,7 +12,7 @@ class ApiController extends Controller {
     const { ctx } = this;
     console.log('pdf2img called');
     const pdfBase64 = ctx.request.body.data;
-    ctx.body = await this.service.pdfconvert.pdf2img(pdfBase64, 'png');
+    ctx.body = await this.service.pdfconvert.pdf2img(pdfBase64);
   }
 }
 

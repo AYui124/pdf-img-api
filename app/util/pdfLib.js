@@ -8,7 +8,7 @@ const outputDirectory = './output/image';
 class PdfHelper {
   async pdfToImage(base64, pageNum = 1) {
     const option = {
-      density: 600,
+      density: 100,
       savePath: outputDirectory,
       saveFilename: Date.now(),
     };
