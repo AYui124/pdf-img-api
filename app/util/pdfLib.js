@@ -6,7 +6,7 @@ const rimraf = require('rimraf');
 const outputDirectory = './output/image';
 
 class PdfHelper {
-  async pdfToImage(base64, pageNum = 1, density = 200) {
+  async pdfToImage(base64, pageNum = 1, density = 600) {
     const option = {
       density,
       savePath: outputDirectory,
