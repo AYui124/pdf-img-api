@@ -31,9 +31,9 @@ $ brew install gs graphicsmagick
 `C:\Program Files\gs\gs****\bin`  
 `C:\program files\graphicsmagick-****`
 
-关于服务端框架可查看 [egg docs][egg]
-
 ### 开发
+
+关于服务端框架可查看 [egg docs][egg]
 
 ```bash
 $ npm install
