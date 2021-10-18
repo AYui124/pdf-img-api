@@ -6,7 +6,8 @@ const rimraf = require('rimraf');
 const outputDirectory = './output/image';
 
 class PdfHelper {
-  async pdfToImage(base64, pageNum = 1, density = 600) {
+  async pdf2Img(base64, pageNum = 1, density = 600) {
+    console.log('PdfHelper.pdfToImage() called');
     const option = {
       density,
       savePath: outputDirectory,
@@ -18,7 +19,7 @@ class PdfHelper {
 
     const converter = fromBase64(base64, option);
     const result = await converter(pageNum);
-    console.log(result);
+    console.log('convert result: ' + JSON.stringify(result));
     return readFileSync(result.path, 'base64');
   }
 }
