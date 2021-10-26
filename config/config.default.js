@@ -25,6 +25,7 @@ module.exports = appInfo => {
   };
 
   config.customLoader = {
+    // 智能提示需要安装并在package.json配置egg.tsHelper
     util: {
       directory: 'app/util',
       inject: 'ctx',

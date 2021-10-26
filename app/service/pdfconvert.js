@@ -6,8 +6,8 @@ class PdfConvertService extends Service {
     const result = {};
     try {
       const { ctx } = this;
-      console.log('pdf2img');
-      const res = await ctx.util.pdflib.pdfToImage(pdfBase64);
+      console.log('PdfConvertService.pdf2img() called');
+      const res = await ctx.util.pdflib.pdf2Img(pdfBase64);
       // console.log(res);
       result.success = true;
       result.data = res;
