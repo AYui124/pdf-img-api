@@ -18,4 +18,8 @@ describe('test/app/controller/api.test.js', () => {
   it('shoult Post /api/pdf2img', () => {
     return app.httpRequest().post('/api/pdf2img').expect(200);
   });
+
+  it('shoult Post /api/html2img', () => {
+    return app.httpRequest().post('/api/html2img').expect(200);
+  });
 });

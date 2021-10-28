@@ -7,7 +7,7 @@ const outputDirectory = './output/image';
 
 class PdfHelper {
   async pdf2Img(base64, pageNum = 1, density = 600) {
-    console.log('PdfHelper.pdfToImage() called');
+    console.log('PdfHelper.pdf2Img() called');
     const option = {
       density,
       savePath: outputDirectory,

@@ -4,11 +4,10 @@ const puppeteer = require('puppeteer');
 const { mkdirsSync, readFileSync } = require('fs-extra');
 const rimraf = require('rimraf');
 const outputDirectory = './output/html';
-
-
 class HtmlHelper {
   async html2Img(html, left, top, width, height) {
     console.log('HtmlHelper.html2Img() called');
+
     // 先重建文件夹
     rimraf.sync(outputDirectory);
     mkdirsSync(outputDirectory);

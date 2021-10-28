@@ -3,7 +3,7 @@ const { readFileSync } = require('fs-extra');
 const ps = require('path');
 const { app, assert } = require('egg-mock/bootstrap');
 
-describe('test/app/util/pdflib.test.js', async () => {
+describe('test/app/util/htmllib.test.js', async () => {
   const data = prepareData();
 
   it('should assert', () => {
@@ -14,16 +14,20 @@ describe('test/app/util/pdflib.test.js', async () => {
     // yield ctx.service.xx();
   });
 
-  it('pdf2Img', async () => {
+  it('html2Img', async () => {
     const ctx = app.mockContext();
-    const result = await ctx.util.pdflib.pdf2Img(data.pdfBase64);
+    const result = await ctx.util.htmllib.html2Img(data.base64, data.left, data.top, data.width, data.height);
     assert(result.length > 0);
   });
 
   function prepareData() {
     const data = {};
     const currPath = ps.resolve('./');
-    data.pdfBase64 = readFileSync(currPath + '/test/data/test.pdf', 'base64');
+    data.base64 = readFileSync(currPath + '/test/data/html.txt', 'base64');
+    data.left = 0;
+    data.top = 0;
+    data.width = 1366;
+    data.height = 768;
     return data;
   }
 });
